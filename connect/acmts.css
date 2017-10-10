@@ -1,0 +1,39 @@
+p{
+text-align:center;
+font-size:200%;
+font-style:bold;
+color:rgb(76, 190, 110);
+
+}
+
+h1{
+text-align:center;
+font-size:350%;
+font-style:bold;
+color:red;
+
+}
+body {
+	position:center;
+	background:orange;
+
+
+
+}
+table, th, td {
+	align:center;
+	padding:3px;
+	position:middle;
+	text-align:center;
+     	border: 3px solid rgb(255, 104, 0);
+}
+
+ul#menu li{
+	font-size:200%;
+	text-align:center;
+	border-radius:10px 10px 0 0;
+	background-color:lightblue;
+	color:green;
+	margin:25px;
+	padding:15px 10px;
+	 }

@@ -1,0 +1,68 @@
+
+
+
+
+
+
+    <?php
+       
+
+        
+	$UserFName =$_POST['UserFName'];
+        $UserLName =$_POST['UserLName'];
+        $UserName =$_POST['UserName'];
+	$Title = $_POST['Title'];
+        $Email =$_POST['Email'];
+	$password =md5($_POST['Password']);
+        $confirmpassword =md5($_POST['confirmpassword']);
+
+
+
+    /* Attempt MySQL server connection. Assuming you are running MySQL
+
+    server with default setting (user 'root' with no password) */
+
+    $link = mysqli_connect("localhost", "Hajra", "HidayA$9$0", "ACMTS");
+
+     
+
+    // Check connection
+
+    if($link === false){
+
+        die("ERROR: Could not connect. " . mysqli_connect_error());
+
+    }
+
+     
+
+    // Attempt insert query execution
+
+    $sql = "INSERT INTO user(UserID,UserFName,UserLName,UserName,Title,Email,Password) VALUES ('$UserFName','$UserLName','$UserName','$Title','$Email','$password')";
+   if($password== $confirmpassword ){
+
+    if(mysqli_query($link, $sql)){
+
+        echo "Records added successfully.";
+
+    } else{
+
+        echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+
+    }
+
+     
+}else
+
+echo "password not match";
+    // Close connection
+
+    mysqli_close($link);
+
+    ?>
+
+</br>
+</br>
+<a href="index.php">LOG OUT</a>
+
+
